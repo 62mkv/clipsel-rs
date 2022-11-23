@@ -1,0 +1,16 @@
+﻿.Language=Russian,Russian (Русский)
+.PluginContents=Select from Clipboard
+
+@Contents
+$ #Select from Clipboard#
+  Данный плагин для FAR Manager вдохновлен плагином Select-from-Clipboard (https://plugring.farmanager.com/plugin.php?pid=18),
+  который, к сожалению, не работает в последних сборках FAR Manager v3 x64.
+
+  Плагин написан на языке Rust, благодаря очень крутому проекту by Dmitry Pelevin: https://github.com/dpelevin/farmanager-api-rust-bindings.
+
+  Поддерживает "FileList" (когда файлы выделены в Проводнике Windows) и "Unicode" форматы буфера обмена.
+
+  В последнем случае (юникод), каждый символ с кодом менее 0x20 (32) интерпретируется как разделитель. Таким образом, Вы
+  можете выделить файлы на одной панели FAR Manager, нажать Ctrl+C, затем выделить с помощью данного плагина совпадающие имена файлов на другой панели.
+
+  Или можно просто скопировать список имен файлов в буфер из любого источника, главное чтобы на одной строке было одно имя файла.

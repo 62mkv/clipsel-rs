@@ -1,0 +1,31 @@
+[lib]
+name = "clipselrs"
+crate-type = ["cdylib"]
+
+[package]
+build = "build.rs"
+name = "clipsel-rs"
+version = "0.1.0"
+authors = ["62mkv <62mkv@mail.ru>"]
+edition = "2018"
+
+[build-dependencies.farmanager_build]
+git = "https://github.com/dpelevin/farmanager-api-rust-bindings"
+
+[dependencies]
+libc = "^0.2.66"
+widestring = "0.2.*"
+log = { version = "0.4", features = ["max_level_trace", "release_max_level_info"] }
+kernel32-sys = "0.2"
+simplelog = "0.5"
+farmanager_codegen = { git = "https://github.com/dpelevin/farmanager-api-rust-bindings" }
+farmanager = { git = "https://github.com/62mkv/farmanager-api-rust-bindings", branch = "clipboard" }
+guid = "0.1.0"
+clipboard-win = { version = "4.4.2", features = ["std"] }
+
+[dependencies.winapi]
+version = "0.3"
+features = ["winuser", "minwinbase"]
+
+[profile.release]
+lto = true

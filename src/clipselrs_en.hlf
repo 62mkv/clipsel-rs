@@ -1,0 +1,12 @@
+﻿.Language=English,English (English)
+.PluginContents=Select from Clipboard
+
+@Contents
+$ #Select from Clipboard#
+  This plugin for FAR Manager is inspired by Select-from-Clipboard plugin (https://plugring.farmanager.com/plugin.php?pid=18), that, unfortunately, does not work with latest v3 x64 FAR Manager builds.
+
+  Plugin is written in Rust language, powered by this cool project by Dmitry Pelevin: https://github.com/dpelevin/farmanager-api-rust-bindings.
+
+  It supports "FileList" (when you select and copy files/folders in Windows Explorer) and "Unicode" clipboard formats.
+  In the latter case, every character below 0x20 (32) is considered a separator. This way you can paste from one FAR Manager
+  panel and select matching filenames on the other. Or you can copy filelists from any source, given you have one file name per line.
